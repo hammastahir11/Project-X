@@ -191,18 +191,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 475457532, guid: 65762fc816faee044a0f8a90262d44eb, type: 3}
-      propertyPath: RotationThrust
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 475457537, guid: 65762fc816faee044a0f8a90262d44eb, type: 3}
-      propertyPath: m_Drag
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 475457537, guid: 65762fc816faee044a0f8a90262d44eb, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     - target: {fileID: 7546112338621771159, guid: 65762fc816faee044a0f8a90262d44eb, type: 3}
       propertyPath: m_Name
       value: Rocket
