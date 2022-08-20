@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,14 +7,21 @@ public class Movement : MonoBehaviour
 
     [SerializeField] float speedUp = 100f;
     [SerializeField] float RotationThrust = 1f;
+    [SerializeField] AudioClip mainEngine;
+
+     
     Rigidbody Rigidbody;
-    // Start is called before the first frame update
+    AudioSource audioSource;
+    
+
+
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         ProcessThrust();
@@ -25,6 +32,13 @@ public class Movement : MonoBehaviour
     void ProcessThrust(){
         if(Input.GetKey(KeyCode.Space)){
             Rigidbody.AddRelativeForce(Vector3.up * speedUp * Time.deltaTime);
+            if(!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(mainEngine);
+            }
+        }
+        else{
+            audioSource.Stop();
         }
 
     }
